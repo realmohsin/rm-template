@@ -1,5 +1,16 @@
 # rm-create-spa
 
+# core libraries
+
+- react
+- react-dom
+- redux
+- react-redux
+- redux-thunk
+- react-router-dom
+- history
+- @emotion/core
+
 ## Todo
 
 - eslint

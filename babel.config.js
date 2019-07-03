@@ -7,7 +7,8 @@ const presets = [
       debug: true
     }
   ],
-  ['@babel/preset-react']
+  ['@babel/preset-react'],
+  ['@emotion/babel-preset-css-prop']
 ]
 
 const plugins = [
