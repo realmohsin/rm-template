@@ -3,8 +3,7 @@ const presets = [
     '@babel/preset-env',
     {
       useBuiltIns: 'usage',
-      corejs: '3.0.1',
-      debug: true
+      corejs: '3.4.7'
     }
   ],
   ['@babel/preset-react'],
@@ -13,7 +12,8 @@ const presets = [
 
 const plugins = [
   '@babel/plugin-syntax-dynamic-import',
-  '@babel/plugin-proposal-class-properties'
+  '@babel/plugin-proposal-class-properties',
+  '@babel/plugin-transform-runtime' // multiple options should be tested
 ]
 
 module.exports = { presets, plugins }
