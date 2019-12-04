@@ -1,21 +1,10 @@
-# rm-create-spa
+# react-spa-template
 
-# core libraries
+Template for React Single Page Applications.
 
-- react
-- react-dom
-- redux
-- react-redux
-- redux-thunk
-- react-router-dom
-- history
-- @emotion/core
-
-## Todo
-
-- eslint
-- brotli compression
-- environment vars
-- only used css extraction
-- when using semantic-ui components, make sure proptypes is stripped from production files
-- ...
+- brotli and gzip compression
+- heroku friendly setup
+- code-splitting enabled
+- optimized babel/polyfill footprints
+- optional starter files for redux pattern
+- optional starter setup for @emotion (css-in-js)
