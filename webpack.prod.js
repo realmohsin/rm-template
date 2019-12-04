@@ -1,23 +1,25 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   mode: 'production',
   entry: {
-    main: './src/index.js'
+    index: './src/index.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].[contenthash].bundle.js',
+    filename: 'scripts/[name].[contenthash:8].js',
+    chunkFilename: 'scripts/[name].[contenthash:8].js',
     publicPath: '/'
   },
   optimization: {
     splitChunks: {
       chunks: 'all',
-      automaticNameDelimiter: '_',
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/
@@ -56,31 +58,46 @@ module.exports = {
         test: /\.(jpe?g|png|svg|gif)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 5000,
-              fallback: 'file-loader',
-              name: '[name].[contenthash].[ext]'
+              name: '[name].[contenthash:8].[ext]',
+              publicPath: '/images',
+              outputPath: '/images'
             }
-          },
-          'image-webpack-loader'
+          }
         ]
       }
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].[contenthash:8].css'
+    }),
+    new OptimizeCssAssetsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: 'src/assets/favicon.ico',
       minify: {
-        removeAttributeQuotes: true,
-        collapseWhiteSpace: true,
-        removeComments: true
-      }
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+      favicon: 'src/assets/favicon.ico'
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
+    new CompressionPlugin({
+      algorithm: 'gzip'
     }),
-    new CleanWebpackPlugin()
+    new CompressionPlugin({
+      filename: '[path].br[query]',
+      algorithm: 'brotliCompress',
+      test: /\.(js|css|html|svg)$/,
+      compressionOptions: { level: 11 },
+      threshold: 0,
+      minRatio: 0.8,
+      deleteOriginalAssets: false
+    })
   ]
 }
