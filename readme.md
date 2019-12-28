@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://image.flaticon.com/icons/png/512/1085/1085802.png" />
+  <img alt="Logo" src="https://image.flaticon.com/icons/png/512/1085/1085802.png" width="100" />
 </div>
 <h1 align="center">React SPA Webpack Template</h1>
 
