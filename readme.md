@@ -1,3 +1,6 @@
+<div align="center">
+  <img alt="Logo" src="https://image.flaticon.com/icons/png/512/1085/1085802.png" />
+</div>
 <h1 align="center">React SPA Webpack Template</h1>
 
 Template for React Single Page Applications.
