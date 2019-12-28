@@ -1,4 +1,4 @@
-# react-spa-template
+<h1 align="center">React SPA Webpack Template</h1>
 
 Template for React Single Page Applications.
 
