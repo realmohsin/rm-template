@@ -1,7 +1,7 @@
 {
-  "name": "react-spa-template",
-  "version": "2.0.0",
-  "description": "Template for a React Single Page Application",
+  "name": "spa-template",
+  "version": "2.2.0",
+  "description": "Template for React single-page-applications, in the same veins as create-react-app.",
   "scripts": {
     "start": "node server/server.js",
     "dev": "webpack-dev-server --config webpack.dev.js --open",
@@ -44,7 +44,7 @@
     "file-loader": "^3.0.1",
     "history": "4.10.1",
     "html-webpack-plugin": "4.0.0-beta.11",
-    "mini-css-extract-plugin": "^0.6.0",
+    "mini-css-extract-plugin": "0.6.0",
     "node-sass": "4.13.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "postcss-loader": "3.0.0",
