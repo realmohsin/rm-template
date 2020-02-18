@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import { colors, fontFamilies, breakpoints } from './variables'
 
 const globalStyles = css`
   *,
@@ -9,41 +10,54 @@ const globalStyles = css`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 62.5%;
+    @media (max-width: ${breakpoints.landscape}) {
+      font-size: 60%;
+    }
+    @media (max-width: ${breakpoints.portrait}) {
+      font-size: 58%;
+    }
+  }
+
   body {
-    font-family: '';
-    font-size: '';
-    line-height: '';
+    font-family: ${fontFamilies.textFont};
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: black;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: '';
-    font-weight: '';
-    color: '';
+    font-family: ${fontFamilies.titleFont};
+    font-weight: 400;
   }
 
   h1 {
-    font-size: '';
+    font-size: 4.6rem;
   }
 
   h2 {
-    font-size: '';
+    font-size: 3.8rem;
   }
 
   h3 {
-    font-size: '';
+    font-size: 2.8rem;
   }
 
   h4 {
-    font-size: '';
+    font-size: 2.2rem;
   }
 
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  h5 {
+    font-size: 2rem;
+  }
+
+  h6 {
+    font-size: 1.8rem;
   }
 
   ol,
@@ -52,8 +66,17 @@ const globalStyles = css`
   }
 
   ::selection {
-    background-color: '';
+    background-color: ${colors.primary};
     color: white;
+  }
+
+  a,
+  img,
+  label,
+  input,
+  select,
+  button {
+    display: block;
   }
 `
 
