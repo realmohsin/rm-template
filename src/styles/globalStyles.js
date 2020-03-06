@@ -74,10 +74,10 @@ const globalStyles = css`
 
   a,
   img,
+  button,
   label,
   input,
-  select,
-  button {
+  select {
     display: block;
   }
 `

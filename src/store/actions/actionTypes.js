@@ -1,1 +1,1 @@
-// action types
+// Action Types

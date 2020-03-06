@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://image.flaticon.com/icons/svg/1653/1653627.svg" width="70" />
+  <img alt="Logo" src="https://image.flaticon.com/icons/svg/603/603199.svg" width="70" />
 </div>
 <h1 align="center">
   SPA Template
@@ -59,15 +59,17 @@ npm run develop
     ├── webpack.dev.js
     └── webpack.prod.js
 
-1.  **`/src/history`**: This directory exports a browser history object.
+Notable Files And Folders:
 
-2.  **`/src/store`**: This directory exports an optional Redux store.
+1.  **`/src/history`**: Decouples browser history object from React Router.
 
-3.  **`/src/styles`**: This directory exports styling variables and components using Emotion.
+2.  **`/src/store`**: Optional Redux store setup.
 
-4.  **`/src/App.jsx`**: This file is the start of application-specific components, contains routing setup.
+3.  **`/src/styles`**: @emotion CSS-in-JS setup.
 
-5.  **`/src/index.js`**: This file is the entry point for webpack bundling.
+4.  **`/src/App.jsx`**: Start of application-specific components, contains routing setup.
+
+5.  **`/src/index.js`**: Webpack entry point for bundling.
     <br></br>
 
 ## Features <a name="features"></a>
@@ -77,5 +79,5 @@ npm run develop
 - Code-Splitting Enabled
 - Optimized Polyfill Footprints
 - Optional Redux Store
-- Optional @emotion Setup (CSS-in-JS)
+- @emotion Setup (CSS-in-JS)
   <br></br>
