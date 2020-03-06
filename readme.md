@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://image.flaticon.com/icons/svg/603/603199.svg" width="70" />
+  <img alt="Logo" src="https://image.flaticon.com/icons/svg/747/747843.svg" width="50" />
 </div>
 <h1 align="center">
   SPA Template
