@@ -31,6 +31,8 @@ npm run develop
 
 ## What's Inside? <a name="whatsInside"></a>
 
+Notable Files And Folders
+
     .
     ├── server
         ├── index.js
@@ -58,8 +60,6 @@ npm run develop
     ├── readme.md
     ├── webpack.dev.js
     └── webpack.prod.js
-
-Notable Files And Folders:
 
 1.  **`/src/history`**: Decouples browser history object from React Router.
 
