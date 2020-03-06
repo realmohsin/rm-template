@@ -50,11 +50,9 @@ Notable Files And Folders
         ├── index.html
         ├── index.js
     ├── .browserslistrc
-    ├── .eslintignore
     ├── .eslintrc
     ├── .gitignore
     ├── babel.config.js
-    ├── package-lock.json
     ├── package.json
     ├── postcss.config.js
     ├── readme.md
