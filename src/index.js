@@ -2,13 +2,11 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { createBrowserHistory } from 'history'
 import App from './App'
-import store from './store/store'
+import store from './store'
+import history from './history'
 
-const history = createBrowserHistory()
-
-const domTree = (
+const app = (
   <Provider store={store}>
     <Router history={history}>
       <App />
@@ -16,4 +14,4 @@ const domTree = (
   </Provider>
 )
 
-render(domTree, document.getElementById('root'))
+render(app, document.getElementById('root'))

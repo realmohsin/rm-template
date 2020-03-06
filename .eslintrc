@@ -9,7 +9,7 @@
     "no-multiple-empty-lines": [
       "error",
       {
-        "max": 4
+        "max": 3
       }
     ],
     "react/prop-types": 0,

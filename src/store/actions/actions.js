@@ -1,1 +1,1 @@
-// all application actions
+// application actions
