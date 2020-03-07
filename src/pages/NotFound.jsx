@@ -9,7 +9,7 @@ const NotFound = props => {
   )
 }
 
-const notFound = css`
+const notFound = theme => css`
   text-align: center;
 `
 

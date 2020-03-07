@@ -9,7 +9,7 @@ const HomePage = props => {
   )
 }
 
-const homePage = css`
+const homePage = theme => css`
   text-align: center;
 `
 
